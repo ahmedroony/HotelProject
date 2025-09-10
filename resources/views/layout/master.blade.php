@@ -46,12 +46,12 @@
                   <div class="row full-height align-items-center">
                     <div class="col-md-6 mx-auto">
                       <ul class="list-unstyled menu">
-                        <li class="active"><a href="index.html">Home</a></li>
-                        <li><a href="rooms.html">Rooms</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="events.html">Events</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="reservation.html">Reservation</a></li>
+                        <li class="active"><a href="{{route('home')}}">Home</a></li>
+                        <li><a href="{{route('rooms')}}">Rooms</a></li>
+                        <li><a href="{{route('about')}}">About</a></li>
+                        <li><a href="{{route('events')}}">Events</a></li>
+                        <li><a href="{{route('contact')}}">Contact</a></li>
+                        <li><a href="{{route('reservation')}}">Reservation</a></li>
                       </ul>
                     </div>
                   </div>
@@ -64,12 +64,16 @@
     </header>
     <!-- END head -->
 
-    <section class="site-hero overlay" style="background-image: url(images/hero_4.jpg)" data-stellar-background-ratio="0.5">
+    <section class="site-hero inner-page overlay" style="background-image: url(images/hero_4.jpg)" data-stellar-background-ratio="0.5">
       <div class="container">
         <div class="row site-hero-inner justify-content-center align-items-center">
-          <div class="col-md-10 text-center" data-aos="fade-up">
-            <span class="custom-caption text-uppercase text-white d-block  mb-3">Welcome To 5 <span class="fa fa-star text-primary"></span>   Hotel</span>
-            <h1 class="heading">A Best Place To Stay</h1>
+          <div class="col-md-10 text-center" data-aos="fade">
+            <h1 class="heading mb-3">About Us</h1>
+            <ul class="custom-breadcrumbs mb-4">
+              <li><a href="{{route('home')}}">Home</a></li>
+              <li>&bullet;</li>
+              <li>About</li>
+            </ul>
           </div>
         </div>
       </div>
@@ -82,9 +86,12 @@
     </section>
     <!-- END section -->
 
-
-    @yield('content')
-
+    @yield('home')
+    @yield('about')
+    @yield('Contact us')
+    @yield('events')
+    @yield('reservation')
+    @yield('rooms')
 
 
      <footer class="section footer-section">
