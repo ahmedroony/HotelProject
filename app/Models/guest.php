@@ -9,9 +9,8 @@ class Guest extends Model
 {
     use HasFactory;
 
-    /**
-     * The attributes that are mass assignable.
-     */
+    //The attributes that are mass assignable.
+    
     protected $fillable = [
         'first_name',
         'last_name',
@@ -20,9 +19,8 @@ class Guest extends Model
         'date_of_birth',
     ];
 
-    /**
-     * The attributes that should be cast.
-     */
+    //The attributes that should be cast.
+    
     protected $casts = [
         'date_of_birth' => 'date',
     ];
