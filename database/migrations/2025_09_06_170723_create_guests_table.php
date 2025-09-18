@@ -17,8 +17,7 @@ return new class extends Migration
             $table->string('last_name');
             $table->string('email');
             $table->string('phone' , 30)->nullable();
-            $table->date('date_of_birth');
-
+            $table->date('date_of_birth')->nullable();//should be nullable
             $table->timestamps();
         });
     }
