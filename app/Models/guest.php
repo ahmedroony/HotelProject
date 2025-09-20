@@ -3,13 +3,13 @@
 namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;//don`t forget this
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Notifications\Notifiable;
 
-
-class Guest extends Model
+class Guest extends Authenticatable
 {
-    use HasFactory;
+    use HasFactory, Notifiable;
 
-    //The attributes that are mass assignable.
     
     protected $fillable = [
         'first_name',
@@ -17,11 +17,29 @@ class Guest extends Model
         'email',
         'phone',
         'date_of_birth',
+        'password',
     ];
 
-    //The attributes that should be cast.
+    
+    protected $hidden = [
+        'password',
+        'remember_token',
+    ];
+
     
     protected $casts = [
         'date_of_birth' => 'date',
+        'email_verified_at' => 'datetime',
     ];
+
+    
+    public function bookings()
+    {
+        return $this->hasMany(Booking::class);
+    }
+
+    public function reservations()
+    {
+        return $this->hasMany(Reservation::class);
+    }
 }
