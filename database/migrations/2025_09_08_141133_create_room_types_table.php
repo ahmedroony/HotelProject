@@ -13,6 +13,7 @@ return new class extends Migration
             $table->id();
             $table->string('name')->unique();
             $table->text('description')->nullable();
+            $table->text('imagepath') ->nullable();
             $table->decimal('price' , 10, 2);
             $table->unsignedBigInteger('max_adults');
             $table->unsignedBigInteger('max_children');

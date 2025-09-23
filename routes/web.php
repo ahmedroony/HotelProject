@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BookingController;
 
 Route::get('/', function () {
     return view('home');
@@ -25,3 +26,5 @@ Route::get('/reservation', function () {
 Route::get('/rooms', function () {
     return view('rooms');
 })->name('rooms');
+
+Route::get('/check-availability' , [BookingController::class , 'checkAvailability'])->name('check.availability');

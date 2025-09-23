@@ -211,3 +211,14 @@
 
 
 })(jQuery);
+
+ // Today's date
+  const today = new Date();
+  const formattedToday = today.toISOString().split('T')[0];
+  document.getElementById("checkin_date").value = formattedToday;
+
+  // Checkout = today + 2 days
+  const checkout = new Date();
+  checkout.setDate(checkout.getDate() + 2);
+  const formattedCheckout = checkout.toISOString().split('T')[0];
+  document.getElementById("checkout_date").value = formattedCheckout;

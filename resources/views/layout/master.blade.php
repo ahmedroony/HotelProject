@@ -29,7 +29,7 @@
     <header class="site-header js-site-header">
       <div class="container-fluid">
         <div class="row align-items-center">
-          <div class="col-6 col-lg-4 site-logo" data-aos="fade"><a href="index.html">Sogo Hotel</a></div>
+          <div class="col-6 col-lg-4 site-logo" data-aos="fade"><a href="{{"home"}}">Sogo Hotel</a></div>
           <div class="col-6 col-lg-8">
 
 
@@ -64,34 +64,11 @@
     </header>
     <!-- END head -->
 
-    <section class="site-hero inner-page overlay" style="background-image: url(images/hero_4.jpg)" data-stellar-background-ratio="0.5">
-      <div class="container">
-        <div class="row site-hero-inner justify-content-center align-items-center">
-          <div class="col-md-10 text-center" data-aos="fade">
-            <h1 class="heading mb-3">About Us</h1>
-            <ul class="custom-breadcrumbs mb-4">
-              <li><a href="{{route('home')}}">Home</a></li>
-              <li>&bullet;</li>
-              <li>About</li>
-            </ul>
-          </div>
-        </div>
-      </div>
 
-      <a class="mouse smoothscroll" href="#next">
-        <div class="mouse-icon">
-          <span class="mouse-wheel"></span>
-        </div>
-      </a>
-    </section>
-    <!-- END section -->
+  
 
-    @yield('home')
-    @yield('about')
-    @yield('Contact us')
-    @yield('events')
-    @yield('reservation')
-    @yield('rooms')
+    @yield('content')
+    
 
 
      <footer class="section footer-section">
