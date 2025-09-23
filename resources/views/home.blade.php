@@ -33,7 +33,7 @@
                                 <label for="checkin_date" class="font-weight-bold text-black">Check In</label>
 
                                 <div class="icon"><span class="icon-calendar"></span></div>
-                                <input type="date" name="checkin_date" id="checkin_date" class="form-control">
+                                <input type="date" name="checkin_date" id="checkindate" class="form-control">
 
                             </div>
 
@@ -41,7 +41,7 @@
                                 <label for="checkout_date" class="font-weight-bold text-black">Check Out</label>
 
                                 <div class="icon"><span class="icon-calendar"></span></div>
-                                <input type="date" name="checkout_date" id="checkout_date" class="form-control">
+                                <input type="date" name="checkout_date" id="checkoutdate" class="form-control">
 
                             </div>
 
