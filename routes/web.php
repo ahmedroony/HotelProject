@@ -30,7 +30,7 @@ Route::get('/rooms', function () {
 
 Route::get('/check-availability' , [BookingController::class , 'checkAvailability'])->name('check.availability');
 
-// Add the guest authentication routes here
+// Add the guest authentication routes
 Route::middleware('guest:guest')->group(function () {
     Route::get('/register', [GuestAuthController::class, 'showRegistrationForm'])->name('guest.register.form');
     Route::post('/register', [GuestAuthController::class, 'register'])->name('guest.register');
